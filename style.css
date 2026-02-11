@@ -1,0 +1,355 @@
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+ box-sizing:border-box;
+}
+
+body{
+ font-family: "Segoe UI", Arial, sans-serif;
+ background: linear-gradient(135deg,#eef2ff,#f8fafc);
+ margin:0;
+ color:#1f2937;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.nav{
+ background: linear-gradient(90deg,#1f2a44,#2f3e9e);
+ padding:16px 24px;
+ display:flex;
+ gap:22px;
+ align-items:center;
+ box-shadow:0 3px 12px rgba(0,0,0,0.15);
+}
+
+.nav a{
+ color:white;
+ text-decoration:none;
+ font-weight:600;
+ font-size:15px;
+ padding:6px 10px;
+ border-radius:6px;
+ transition:all .2s ease;
+}
+
+.nav a:hover{
+ background:rgba(255,255,255,0.15);
+ color:#ffd166;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+ max-width:1100px;
+ margin:34px auto;
+ background:white;
+ padding:30px;
+ border-radius:14px;
+ box-shadow:0 8px 28px rgba(0,0,0,0.08);
+ animation:fadeIn .35s ease;
+}
+
+@keyframes fadeIn{
+ from{opacity:0; transform:translateY(8px);}
+ to{opacity:1; transform:none;}
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1,h2,h3{
+ margin-top:0;
+ color:#1f2a44;
+ letter-spacing:.3px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.card{
+ background:linear-gradient(135deg,#eef2ff,#ffffff);
+ border:1px solid #e5e9f6;
+ padding:18px;
+ border-radius:12px;
+ margin-bottom:16px;
+ box-shadow:0 4px 12px rgba(0,0,0,0.05);
+}
+
+.card h3{
+ margin-bottom:10px;
+}
+
+
+/* =========================
+   DASHBOARD GRID CARDS
+========================= */
+
+.container > div[style*="grid"] .card{
+ text-align:center;
+ font-size:18px;
+ font-weight:600;
+ background:linear-gradient(135deg,#e0e7ff,#ffffff);
+}
+
+
+/* =========================
+   FORMS
+========================= */
+
+.form-row{
+ margin-bottom:16px;
+ font-weight:600;
+ font-size:14px;
+}
+
+input, select, textarea{
+ width:100%;
+ padding:11px 12px;
+ border:1px solid #cfd6e6;
+ border-radius:8px;
+ font-size:14px;
+ transition:border .2s, box-shadow .2s;
+ background:#fafbff;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+ outline:none;
+ border-color:#4f46e5;
+ box-shadow:0 0 0 3px rgba(79,70,229,.15);
+ background:white;
+}
+
+textarea{
+ min-height:90px;
+ resize:vertical;
+}
+
+
+/* =========================
+   RADIO & CHECKBOX
+========================= */
+
+label{
+ margin-right:14px;
+ font-weight:500;
+ cursor:pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"]{
+ width:auto;
+ margin-right:6px;
+ transform:scale(1.1);
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button{
+ background:linear-gradient(135deg,#4f46e5,#2f3e9e);
+ color:white;
+ padding:12px 18px;
+ border:none;
+ border-radius:9px;
+ font-size:14px;
+ font-weight:600;
+ cursor:pointer;
+ transition:all .2s ease;
+ box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+button:hover{
+ transform:translateY(-1px);
+ box-shadow:0 6px 16px rgba(0,0,0,0.18);
+}
+
+button:active{
+ transform:translateY(0);
+}
+
+
+/* =========================
+   TABLES
+========================= */
+
+table{
+ width:100%;
+ border-collapse:collapse;
+ margin-top:12px;
+ border-radius:10px;
+ overflow:hidden;
+}
+
+th{
+ background:#2f3e9e;
+ color:white;
+ font-weight:600;
+ font-size:14px;
+ padding:12px;
+}
+
+td{
+ padding:12px;
+ border-bottom:1px solid #e6eaf5;
+ font-size:14px;
+}
+
+tr:nth-child(even){
+ background:#f8f9ff;
+}
+
+tr:hover{
+ background:#eef2ff;
+}
+
+
+/* =========================
+   ALERTS
+========================= */
+
+.success{
+ background:#dcfce7;
+ border:1px solid #86efac;
+ color:#166534;
+ padding:12px;
+ border-radius:10px;
+ margin:12px 0;
+ font-weight:600;
+}
+
+.error{
+ background:#fee2e2;
+ border:1px solid #fca5a5;
+ color:#991b1b;
+ padding:12px;
+ border-radius:10px;
+ margin:12px 0;
+ font-weight:600;
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+a{
+ color:#2f3e9e;
+ font-weight:600;
+}
+
+a:hover{
+ text-decoration:underline;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer,
+.footer{
+ text-align:center;
+ margin:40px 0 20px;
+ color:#6b7280;
+ font-size:14px;
+}
+
+
+/* =========================
+   FLOW CHART PAGE
+========================= */
+
+.container ul{
+ margin:8px 0 0 18px;
+}
+
+.container li{
+ margin-bottom:6px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width:900px){
+
+.container{
+ margin:18px;
+ padding:20px;
+}
+
+.nav{
+ flex-wrap:wrap;
+ gap:12px;
+}
+
+.container > div[style*="grid"]{
+ grid-template-columns:1fr !important;
+}
+
+}
+
+/* =========================
+   FORM LAYOUT GRID FIX
+========================= */
+
+.form-grid{
+ display:grid;
+ grid-template-columns: 1fr 1fr;
+ gap:18px;
+}
+
+.form-grid .full{
+ grid-column: 1 / -1;
+}
+
+.form-group{
+ display:flex;
+ flex-direction:column;
+ gap:6px;
+ font-weight:600;
+ font-size:14px;
+}
+
+/* radio group alignment */
+.radio-group{
+ display:flex;
+ gap:18px;
+ align-items:center;
+ margin-top:6px;
+}
+
+/* button alignment */
+.form-actions{
+ margin-top:10px;
+ display:flex;
+ gap:12px;
+}
+
+/* dashboard table spacing */
+table{
+ margin-top:14px;
+}
+
+/* section spacing */
+h3{
+ margin-top:28px;
+ margin-bottom:10px;
+}
